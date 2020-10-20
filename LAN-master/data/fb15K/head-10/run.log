@@ -1,0 +1,3 @@
+finish calculating co relation
+finish processing graph
+INFO:tensorflow:Restoring parameters from ./checkpoints/fb15K/head-10/attention/report/ckpt-1

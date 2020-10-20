@@ -1,0 +1,12 @@
+2020/10/20 19:40:56: args: Namespace(aggregate_type='attention', allow_soft_placement=False, batch_size=1024, corrupt_mode='both', data_dir='./data/fb15K/head-10', embedding_dim=100, epoch_per_checkpoint=1, evaluate_size=1000, gpu_device='0', gpu_fraction=0.2, learning_rate=0.001, loss_function='margin', margin=300.0, max_neighbor=64, n_neg=1, num_epoch=500, save_dir='./checkpoints/fb15K/head-10/attention/report/', score_function='TransE', steps_per_display=100, use_relation=1, weight_decay=0.001)
+2020/10/20 19:40:56: Loading data...
+2020/10/20 19:41:05: got 10336 entities for training
+2020/10/20 19:41:05: got 1170 relations for training
+2020/10/20 19:41:07: got 108854 triplets for train
+2020/10/20 19:41:07: got 11333 triplets for valid
+2020/10/20 19:41:07: got 2731 triplets for test
+2020/10/20 19:41:07: Loading finish...
+2020/10/20 19:41:09: Restore the model from ./checkpoints/fb15K/head-10/attention/report/ckpt-1
+2020/10/20 19:41:09: Restoring parameters from ./checkpoints/fb15K/head-10/attention/report/ckpt-1
+2020/10/20 19:41:09: Start testing on checkpoints
+2020/10/20 19:41:09: evaluating the current model...

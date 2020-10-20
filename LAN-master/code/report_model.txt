@@ -1,0 +1,107 @@
+TensorFlow 2.0 Upgrade Script
+-----------------------------
+Converted 3 files
+Detected 15 issues that require attention
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+File: model\aggregator.py
+--------------------------------------------------------------------------------
+model\aggregator.py:22:21: WARNING: tf.nn.embedding_lookup requires manual check. `partition_strategy` has been removed from tf.nn.embedding_lookup.  The 'div' strategy will be used by default.
+model\aggregator.py:50:21: WARNING: tf.nn.embedding_lookup requires manual check. `partition_strategy` has been removed from tf.nn.embedding_lookup.  The 'div' strategy will be used by default.
+model\aggregator.py:128:21: WARNING: tf.nn.embedding_lookup requires manual check. `partition_strategy` has been removed from tf.nn.embedding_lookup.  The 'div' strategy will be used by default.
+model\aggregator.py:130:15: WARNING: tf.nn.embedding_lookup requires manual check. `partition_strategy` has been removed from tf.nn.embedding_lookup.  The 'div' strategy will be used by default.
+model\aggregator.py:134:25: WARNING: tf.nn.embedding_lookup requires manual check. `partition_strategy` has been removed from tf.nn.embedding_lookup.  The 'div' strategy will be used by default.
+model\aggregator.py:140:21: WARNING: tf.nn.embedding_lookup requires manual check. `partition_strategy` has been removed from tf.nn.embedding_lookup.  The 'div' strategy will be used by default.
+--------------------------------------------------------------------------------
+File: model\framework.py
+--------------------------------------------------------------------------------
+model\framework.py:99:36: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+model\framework.py:105:42: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+model\framework.py:153:31: WARNING: tf.nn.embedding_lookup requires manual check. `partition_strategy` has been removed from tf.nn.embedding_lookup.  The 'div' strategy will be used by default.
+model\framework.py:154:31: WARNING: tf.nn.embedding_lookup requires manual check. `partition_strategy` has been removed from tf.nn.embedding_lookup.  The 'div' strategy will be used by default.
+model\framework.py:159:29: WARNING: tf.nn.embedding_lookup requires manual check. `partition_strategy` has been removed from tf.nn.embedding_lookup.  The 'div' strategy will be used by default.
+model\framework.py:160:29: WARNING: tf.nn.embedding_lookup requires manual check. `partition_strategy` has been removed from tf.nn.embedding_lookup.  The 'div' strategy will be used by default.
+model\framework.py:161:29: WARNING: tf.nn.embedding_lookup requires manual check. `partition_strategy` has been removed from tf.nn.embedding_lookup.  The 'div' strategy will be used by default.
+model\framework.py:162:29: WARNING: tf.nn.embedding_lookup requires manual check. `partition_strategy` has been removed from tf.nn.embedding_lookup.  The 'div' strategy will be used by default.
+model\framework.py:200:28: WARNING: tf.nn.embedding_lookup requires manual check. `partition_strategy` has been removed from tf.nn.embedding_lookup.  The 'div' strategy will be used by default.
+================================================================================
+Detailed log follows:
+
+================================================================================
+================================================================================
+Input tree: 'model'
+================================================================================
+--------------------------------------------------------------------------------
+Processing file 'model\\aggregator.py'
+ outputting to 'modelv21\\aggregator.py'
+--------------------------------------------------------------------------------
+
+22:21: WARNING: tf.nn.embedding_lookup requires manual check. `partition_strategy` has been removed from tf.nn.embedding_lookup.  The 'div' strategy will be used by default.
+50:21: WARNING: tf.nn.embedding_lookup requires manual check. `partition_strategy` has been removed from tf.nn.embedding_lookup.  The 'div' strategy will be used by default.
+128:21: WARNING: tf.nn.embedding_lookup requires manual check. `partition_strategy` has been removed from tf.nn.embedding_lookup.  The 'div' strategy will be used by default.
+130:15: WARNING: tf.nn.embedding_lookup requires manual check. `partition_strategy` has been removed from tf.nn.embedding_lookup.  The 'div' strategy will be used by default.
+134:25: WARNING: tf.nn.embedding_lookup requires manual check. `partition_strategy` has been removed from tf.nn.embedding_lookup.  The 'div' strategy will be used by default.
+140:21: WARNING: tf.nn.embedding_lookup requires manual check. `partition_strategy` has been removed from tf.nn.embedding_lookup.  The 'div' strategy will be used by default.
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'model\\framework.py'
+ outputting to 'modelv21\\framework.py'
+--------------------------------------------------------------------------------
+
+19:13: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+21:38: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+26:38: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+31:38: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+36:38: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+41:37: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+46:37: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+51:37: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+56:37: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+61:37: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+66:37: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+71:37: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+76:37: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+81:37: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+86:37: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+91:41: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+98:13: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+99:36: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+99:36: INFO: Renamed 'tf.get_variable' to 'tf.compat.v1.get_variable'
+102:32: INFO: Changing tf.contrib.layers xavier initializer to a tf.compat.v1.keras.initializers.VarianceScaling and converting arguments.
+
+105:42: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+105:42: INFO: Renamed 'tf.get_variable' to 'tf.compat.v1.get_variable'
+108:32: INFO: Changing tf.contrib.layers xavier initializer to a tf.compat.v1.keras.initializers.VarianceScaling and converting arguments.
+
+153:31: INFO: Added keywords to args of function 'tf.nn.embedding_lookup'
+153:31: WARNING: tf.nn.embedding_lookup requires manual check. `partition_strategy` has been removed from tf.nn.embedding_lookup.  The 'div' strategy will be used by default.
+154:31: INFO: Added keywords to args of function 'tf.nn.embedding_lookup'
+154:31: WARNING: tf.nn.embedding_lookup requires manual check. `partition_strategy` has been removed from tf.nn.embedding_lookup.  The 'div' strategy will be used by default.
+159:29: INFO: Added keywords to args of function 'tf.nn.embedding_lookup'
+159:29: WARNING: tf.nn.embedding_lookup requires manual check. `partition_strategy` has been removed from tf.nn.embedding_lookup.  The 'div' strategy will be used by default.
+160:29: INFO: Added keywords to args of function 'tf.nn.embedding_lookup'
+160:29: WARNING: tf.nn.embedding_lookup requires manual check. `partition_strategy` has been removed from tf.nn.embedding_lookup.  The 'div' strategy will be used by default.
+161:29: INFO: Added keywords to args of function 'tf.nn.embedding_lookup'
+161:29: WARNING: tf.nn.embedding_lookup requires manual check. `partition_strategy` has been removed from tf.nn.embedding_lookup.  The 'div' strategy will be used by default.
+162:29: INFO: Added keywords to args of function 'tf.nn.embedding_lookup'
+162:29: WARNING: tf.nn.embedding_lookup requires manual check. `partition_strategy` has been removed from tf.nn.embedding_lookup.  The 'div' strategy will be used by default.
+169:19: INFO: Added keywords to args of function 'tf.reduce_mean'
+170:20: INFO: Added keywords to args of function 'tf.reduce_mean'
+176:19: INFO: Added keywords to args of function 'tf.reduce_mean'
+179:20: INFO: Added keywords to args of function 'tf.reduce_mean'
+182:20: INFO: Added keywords to args of function 'tf.reduce_mean'
+185:20: INFO: Added keywords to args of function 'tf.reduce_mean'
+196:25: INFO: Renamed 'tf.train.AdamOptimizer' to 'tf.compat.v1.train.AdamOptimizer'
+200:28: INFO: Added keywords to args of function 'tf.nn.embedding_lookup'
+200:28: WARNING: tf.nn.embedding_lookup requires manual check. `partition_strategy` has been removed from tf.nn.embedding_lookup.  The 'div' strategy will be used by default.
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'model\\score_function.py'
+ outputting to 'modelv21\\score_function.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
